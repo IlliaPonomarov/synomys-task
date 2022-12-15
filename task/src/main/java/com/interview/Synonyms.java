@@ -9,11 +9,10 @@ public class Synonyms {
         this.pageParser = new PageParser();
     }
 
-    // is two words synonyms?
+    // is two words synonyms
     public String isSynonyms(String word1, String word2) {
 
         int numberOfRepeat = pageParser.repeatingOfWordInText(word1.toLowerCase(), word2.toLowerCase());
-        System.out.println(numberOfRepeat);
 
         if (numberOfRepeat > 1 || word1.equals(word2))
             return "synonyms";

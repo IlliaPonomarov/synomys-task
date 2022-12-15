@@ -13,7 +13,7 @@ public class App
         int numberOfCases = 0;
         int numberOfQueries = 0;
         int currQueries = 0;
-        Synonyms synonyms = null;
+        Synonyms synonyms = new Synonyms();
         String sentence = "";
 
         Scanner scanner = new Scanner(System.in);
@@ -34,16 +34,13 @@ public class App
             return;
         }
 
-        synonyms = new Synonyms(numberOfCases, numberOfQueries);
-       // System.out.println(synonyms.isSynonyms("balance", "underground"));
-
-        
 
         for (int i = 0; i < numberOfCases; i++) {
 
             
             if (numberOfQueries == currQueries){
                 scanner = new Scanner(System.in);
+                System.out.println("Enter number of queries:");
                 numberOfQueries = scanner.nextInt();
                 currQueries = 0;
             }

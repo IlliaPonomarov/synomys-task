@@ -35,7 +35,6 @@ public class PageParser {
         int count = 0;
         String definition = definitionOfWordParse(word1);
         String[] words = definition.split(" ");
-        System.out.println(Arrays.toString(words));
 
         for (String w : words) 
             if (w.toLowerCase().equals(word2) || w.toLowerCase().contains(word2))
